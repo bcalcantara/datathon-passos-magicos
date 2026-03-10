@@ -92,3 +92,8 @@ Essa segmentação foi utilizada para avaliar evolução e distribuição de des
 Como rodar
 pip install -r requirements.txt
 jupyter notebook
+
+ ## Aplicação online
+
+Acesse a aplicação publicada no Streamlit:
+[Link do app](https://seu-app.streamlit.app)
