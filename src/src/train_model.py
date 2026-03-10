@@ -10,8 +10,13 @@ caminho_modelo = BASE_DIR / "models" / "modelo_risco.pkl"
 
 df = pd.read_csv(caminho_dados)
 
-modelo = treinar_modelo(df)
+resultado = treinar_modelo(df)
 
-joblib.dump(modelo, caminho_modelo)
+joblib.dump(resultado["model"], caminho_modelo)
 
 print("Modelo salvo com sucesso!")
+print(f"Linhas usadas na modelagem: {resultado['n_linhas_modelo']}")
+print(resultado["report"])
+print("AUC:", resultado["auc"])
+print("Coeficientes:")
+print(resultado["coeficientes"])
